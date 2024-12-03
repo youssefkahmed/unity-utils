@@ -5,6 +5,7 @@ namespace Utils.AnimationEvents
     public class AnimationEventStateBehaviour : StateMachineBehaviour
     {
         public float TriggerTime => triggerTime;
+        public string EventName => eventName;
         
         [SerializeField] private string eventName;
         [SerializeField, Range(0f, 1f)] private float triggerTime;
