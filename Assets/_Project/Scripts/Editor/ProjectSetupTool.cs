@@ -22,7 +22,6 @@ namespace Utils
                 "Input",
                 "Materials",
                 "Models",
-                "ParticleEffects",
                 "Prefabs",
                 "Scenes",
                 "Scripts",
@@ -41,22 +40,86 @@ namespace Utils
             Assets.ImportAsset("Mulligan Renamer.unitypackage", "Red Blue Games/Editor ExtensionsUtilities");
         }
 
-        [MenuItem("Utils/Setup/Install Favorite Open Source Assets")]
+        [MenuItem("Utils/Setup/Install Favorite Open-Source Assets")]
         public static void InstallOpenSource()
         {
             Packages.InstallPackages(new[]
             {
                 "git+https://github.com/KyleBanks/scene-ref-attribute",
-                "git+https://github.com/starikcetin/Eflatun.SceneReference.git#3.1.1"
+                "git+https://github.com/starikcetin/Eflatun.SceneReference.git#3.1.1",
+                "git+https://github.com/adammyhre/Unity-Utils"
             });
         }
         
-        [MenuItem("Utils/Setup/Install Unity AI Navigation")]
+        [MenuItem("Utils/Setup/Unity Registry/Install Unity AI Navigation")]
         public static void InstallUnityAINavigation()
         {
             Packages.InstallPackages(new[]
             {
                 "com.unity.ai.navigation"
+            });
+        }
+        
+        [MenuItem("Utils/Setup/Unity Registry/Install New Input System")]
+        public static void InstallNewInputSystem()
+        {
+            Packages.InstallPackages(new[]
+            {
+                "com.unity.inputsystem"
+            });
+        }
+        
+        [MenuItem("Utils/Setup/Unity Registry/Install Cinemachine")]
+        public static void InstallCinemachine()
+        {
+            Packages.InstallPackages(new[]
+            {
+                "com.unity.cinemachine"
+            });
+        }
+        
+        [MenuItem("Utils/Setup/Unity Registry/Install Animation Rigging")]
+        public static void InstallAnimationRigging()
+        {
+            Packages.InstallPackages(new[]
+            {
+                "com.unity.animation.rigging"
+            });
+        }
+        
+        [MenuItem("Utils/Setup/Unity Registry/Install Netcode for GameObjects")]
+        public static void InstallNetcodeForGameObjects()
+        {
+            Packages.InstallPackages(new[]
+            {
+                "com.unity.netcode.gameobjects"
+            });
+        }
+        
+        [MenuItem("Utils/Setup/Unity Registry/Install Shader Graph")]
+        public static void InstallShaderGraph()
+        {
+            Packages.InstallPackages(new[]
+            {
+                "com.unity.shadergraph"
+            });
+        }
+        
+        [MenuItem("Utils/Setup/Unity Registry/Install TextMesh Pro")]
+        public static void InstallTextMeshPro()
+        {
+            Packages.InstallPackages(new[]
+            {
+                "com.unity.textmeshpro"
+            });
+        }
+        
+        [MenuItem("Utils/Setup/Unity Registry/Install XR Interaction Toolkit")]
+        public static void InstallXRInteractionToolkit()
+        {
+            Packages.InstallPackages(new[]
+            {
+                "com.unity.xr.interaction.toolkit"
             });
         }
 
