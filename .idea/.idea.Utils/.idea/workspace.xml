@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c2b109c-77ba-4b6b-b32a-0eee3899ea9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/Demo/DemoScript.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/Demo/DemoScript.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/Editor/InterfaceReferenceDrawer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/Editor/InterfaceReferenceDrawer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/Editor/InterfaceReferenceUtil.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/Editor/InterfaceReferenceUtil.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/Editor/RequireInterfaceDrawer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/Editor/RequireInterfaceDrawer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/InterfaceReference.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/InterfaceReference.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/RequireInterfaceAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/RequireInterfaceAttribute.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/Demo/DamageableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/Demo/DamageableObject.cs" afterDir="false" />
-    </list>
+    <list default="true" id="8c2b109c-77ba-4b6b-b32a-0eee3899ea9f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,7 +95,7 @@
       <updated>1733253859675</updated>
       <workItem from="1733253860330" duration="2123000" />
       <workItem from="1733261397728" duration="4776000" />
-      <workItem from="1733428041154" duration="4195000" />
+      <workItem from="1733428041154" duration="4546000" />
     </task>
     <servers />
   </component>
