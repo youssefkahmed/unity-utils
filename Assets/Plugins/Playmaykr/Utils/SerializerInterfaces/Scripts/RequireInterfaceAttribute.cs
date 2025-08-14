@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Utils.SerializedInterfaces
+namespace Playmaykr.Utils.SerializedInterfaces
 {
     [AttributeUsage(AttributeTargets.Field)]
     public class RequireInterfaceAttribute : PropertyAttribute

@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Utils.SerializedInterfaces
+namespace Playmaykr.Utils.SerializedInterfaces.Editor
 {
     [CustomPropertyDrawer(typeof(RequireInterfaceAttribute))]
     public class RequireInterfaceDrawer : PropertyDrawer

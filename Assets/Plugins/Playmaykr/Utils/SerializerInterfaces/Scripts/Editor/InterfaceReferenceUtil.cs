@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Utils.SerializedInterfaces
+namespace Playmaykr.Utils.SerializedInterfaces.Editor
 {
     public static class InterfaceReferenceUtil
     {

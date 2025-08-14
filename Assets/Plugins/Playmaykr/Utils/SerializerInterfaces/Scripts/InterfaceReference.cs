@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using Object = UnityEngine.Object;
     
-namespace Utils.SerializedInterfaces
+namespace Playmaykr.Utils.SerializedInterfaces
 {
     [Serializable]
     public class InterfaceReference<TInterface, TObject> where TObject : Object where TInterface : class

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Utils.SerializedInterfaces.Demo
+namespace Playmaykr.Utils.SerializedInterfaces.Demo
 {
     public class DamageableObject : MonoBehaviour, IDamageable
     {

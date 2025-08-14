@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Utils.SerializedInterfaces
+namespace Playmaykr.Utils.SerializedInterfaces.Editor
 {
     [CustomPropertyDrawer(typeof(InterfaceReference<>))]
     [CustomPropertyDrawer(typeof(InterfaceReference<,>))]
