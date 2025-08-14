@@ -4,10 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c2b109c-77ba-4b6b-b32a-0eee3899ea9f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Editor/InterfaceReferenceDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Editor/InterfaceReferenceDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Editor/InterfaceReferenceUtil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Editor/InterfaceReferenceUtil.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/RequireInterfaceAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/RequireInterfaceAttribute.cs" afterDir="false" />
+    <list default="true" id="8ecc0c75-a0cb-4c89-b7cc-8e54f278ad92" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Utils/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Utils/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scenes/SerializedInterfaces_SandboxScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scenes/SerializedInterfaces_SandboxScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Demo/DamageableObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Demo/DamageableObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Demo/DemoScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Demo/DemoScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Editor/InterfaceReferenceDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Editor/InterfaceReferenceDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Editor/InterfaceReferenceUtil.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Editor/InterfaceReferenceUtil.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Editor/RequireInterfaceDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Editor/RequireInterfaceDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/InterfaceReference.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/InterfaceReference.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/RequireInterfaceAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/RequireInterfaceAttribute.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +33,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/InterfaceReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/852a96aeaa894abe80349589fdb9b96495d400/eb/a2232627/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Demo/DamageableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Editor/InterfaceReferenceDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Editor/InterfaceReferenceUtil.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Editor/RequireInterfaceDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/RequireInterfaceAttribute.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -28,27 +48,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;serialized-interfaces&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "serialized-interfaces",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Youssef\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Youssef\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Youssef\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Youssef\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Youssef\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\Youssef\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="F:\Software\Unity\2022.3.53f1\Editor\Unity.exe" />
@@ -98,6 +118,7 @@
       <workItem from="1733253860330" duration="2123000" />
       <workItem from="1733261397728" duration="4776000" />
       <workItem from="1733428041154" duration="4546000" />
+      <workItem from="1733435583005" duration="2494000" />
     </task>
     <servers />
   </component>
