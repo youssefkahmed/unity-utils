@@ -8,7 +8,7 @@ using UnityEditor.PackageManager.Requests;
 using static System.IO.Path;
 using static UnityEditor.AssetDatabase;
 
-namespace Utils
+namespace Playmaykr.Utils
 {
     public static class Setup
     {
