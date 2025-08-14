@@ -6,7 +6,7 @@ namespace Playmaykr.Utils.SerializedInterfaces
     [AttributeUsage(AttributeTargets.Field)]
     public class RequireInterfaceAttribute : PropertyAttribute
     {
-        public readonly Type InterfaceType;
+        public Type InterfaceType { get; private set; }
 
         public RequireInterfaceAttribute(Type interfaceType)
         {

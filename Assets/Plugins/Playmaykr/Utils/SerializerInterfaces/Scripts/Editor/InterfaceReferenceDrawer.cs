@@ -21,26 +21,26 @@ namespace Playmaykr.Utils.SerializedInterfaces.Editor
 
             EditorGUI.BeginProperty(position, label, property);
 
-            Object assignedObject = EditorGUI.ObjectField(position, label, underlyingProperty.objectReferenceValue, args.ObjectType, true);
+            Object assignedObject = EditorGUI.ObjectField(position, label, underlyingProperty.objectReferenceValue, args.objectType, true);
             if (assignedObject != null)
             {
                 Object component = null;
                 if (assignedObject is GameObject gameObject)
                 {
-                    component = gameObject.GetComponent(args.InterfaceType);
+                    component = gameObject.GetComponent(args.interfaceType);
                 }
-                else if (args.InterfaceType.IsInstanceOfType(assignedObject))
+                else if (args.interfaceType.IsInstanceOfType(assignedObject))
                 {
                     component = assignedObject;
                 }
 
                 if (component != null)
                 {
-                    ValidateAndAssignObject(underlyingProperty, component, component.name, args.InterfaceType.Name);
+                    ValidateAndAssignObject(underlyingProperty, component, component.name, args.interfaceType.Name);
                 }
                 else
                 {
-                    Debug.LogWarning($"Assigned object does not implement required interface '{args.InterfaceType.Name}'.");
+                    Debug.LogWarning($"Assigned object does not implement required interface '{args.interfaceType.Name}'.");
                     underlyingProperty.objectReferenceValue = null;
                 }
             }
@@ -121,16 +121,16 @@ namespace Playmaykr.Utils.SerializedInterfaces.Editor
     
     public struct InterfaceArgs
     {
-        public readonly Type ObjectType;
-        public readonly Type InterfaceType;
+        public readonly Type objectType;
+        public readonly Type interfaceType;
 
         public InterfaceArgs(Type objectType, Type interfaceType)
         {
             Debug.Assert(typeof(Object).IsAssignableFrom(objectType), $"{nameof(objectType)} needs to be of Type {typeof(Object)}.");
             Debug.Assert(interfaceType.IsInterface, $"{nameof(interfaceType)} needs to be an interface.");
         
-            ObjectType = objectType;
-            InterfaceType = interfaceType;
+            this.objectType = objectType;
+            this.interfaceType = interfaceType;
         }
     }
 }

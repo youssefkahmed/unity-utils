@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c2b109c-77ba-4b6b-b32a-0eee3899ea9f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Demo/DamageableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Demo/DamageableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Demo/DemoScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Demo/DemoScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Editor/InterfaceReferenceDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Editor/InterfaceReferenceDrawer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Editor/InterfaceReferenceUtil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Editor/InterfaceReferenceUtil.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Editor/RequireInterfaceDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Editor/RequireInterfaceDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/InterfaceReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/InterfaceReference.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/RequireInterfaceAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/RequireInterfaceAttribute.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,9 +18,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/81d14593590d42b0896d02b887eab1d427800/27/c5f9358f/AnimationEvent.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/852a96aeaa894abe80349589fdb9b96495d400/be/c9b63414/SerializedProperty.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/SerializedInterfaces/Demo/Damageable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/InterfaceReference.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
