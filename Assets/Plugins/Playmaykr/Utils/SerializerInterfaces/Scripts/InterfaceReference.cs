@@ -4,6 +4,13 @@ using Object = UnityEngine.Object;
     
 namespace Playmaykr.Utils.SerializedInterfaces
 {
+    /// <summary>
+    /// A reference to an object that implements a specific interface.
+    /// This allows for serialization of objects that implement a specific interface,
+    /// while still allowing for polymorphism.
+    /// </summary>
+    /// <typeparam name="TInterface">The interface type that the object must implement.</typeparam>
+    /// <typeparam name="TObject">The type of the object that implements the interface.</typeparam>
     [Serializable]
     public class InterfaceReference<TInterface, TObject> where TObject : Object where TInterface : class
     {

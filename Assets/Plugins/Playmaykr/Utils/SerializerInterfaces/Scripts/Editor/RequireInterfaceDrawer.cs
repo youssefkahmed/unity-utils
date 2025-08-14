@@ -6,6 +6,11 @@ using Object = UnityEngine.Object;
 
 namespace Playmaykr.Utils.SerializedInterfaces.Editor
 {
+    /// <summary>
+    /// Custom property drawer for the RequireInterface attribute.
+    /// This drawer allows you to specify that a field must implement a certain interface.
+    /// It supports both single object fields and arrays of objects.
+    /// </summary>
     [CustomPropertyDrawer(typeof(RequireInterfaceAttribute))]
     public class RequireInterfaceDrawer : PropertyDrawer
     {
@@ -30,6 +35,14 @@ namespace Playmaykr.Utils.SerializedInterfaces.Editor
             InterfaceReferenceUtil.OnGUI(position, property, label, args);
         }
 
+        /// <summary>
+        /// Draws a field for an array of objects that implement a specific interface.
+        /// This method handles the display of the array size and each element in the array.
+        /// </summary>
+        /// <param name="position">The position of the property in the inspector.</param>
+        /// <param name="property">The serialized property representing the array.</param>
+        /// <param name="label">The label for the property.</param>
+        /// <param name="interfaceType">The interface type that each element in the array must implement.</param>
         private void DrawArrayField(Rect position, SerializedProperty property, GUIContent label, Type interfaceType)
         {
             property.arraySize = EditorGUI.IntField(
@@ -46,6 +59,14 @@ namespace Playmaykr.Utils.SerializedInterfaces.Editor
             }
         }
 
+        /// <summary>
+        /// Draws a field for a single object that must implement a specific interface.
+        /// This method allows the user to assign an object that implements the specified interface.
+        /// </summary>
+        /// <param name="position">The position of the property in the inspector.</param>
+        /// <param name="property">The serialized property representing the object.</param>
+        /// <param name="label">The label for the property.</param>
+        /// <param name="interfaceType">The interface type that the object must implement.</param>
         private void DrawInterfaceObjectField(Rect position, SerializedProperty property, GUIContent label, Type interfaceType)
         {
             Object oldReference = property.objectReferenceValue;
@@ -62,6 +83,13 @@ namespace Playmaykr.Utils.SerializedInterfaces.Editor
             }
         }
 
+        /// <summary>
+        /// Validates the new object reference against the required interface type and assigns it to the property.
+        /// If the object does not implement the interface, it logs a warning and sets the property to null.
+        /// </summary>
+        /// <param name="property">The serialized property to assign the object to.</param>
+        /// <param name="newReference">The new object reference to validate and assign.</param>
+        /// <param name="interfaceType">The interface type that the object must implement.</param>
         private static void ValidateAndAssignObject(SerializedProperty property, Object newReference, Type interfaceType)
         {
             if (newReference is GameObject gameObject)
@@ -83,6 +111,14 @@ namespace Playmaykr.Utils.SerializedInterfaces.Editor
             property.objectReferenceValue = null;
         }
         
+        /// <summary>
+        /// Determines the base type that is assignable to the specified interface type.
+        /// This method checks if the field type is an array or a generic list and returns the
+        /// appropriate element type that implements the interface.
+        /// </summary>
+        /// <param name="fieldType">The type of the field being drawn.</param>
+        /// <param name="interfaceType">The interface type that the field must implement.</param>
+        /// <returns>The base type that is assignable to the specified interface type.</returns>
         private static Type GetAssignableBaseType(Type fieldType, Type interfaceType)
         {
             Type elementType = fieldType.IsArray
@@ -109,6 +145,12 @@ namespace Playmaykr.Utils.SerializedInterfaces.Editor
             return typeof(Object);
         }
         
+        /// <summary>
+        /// Gets the type or element type of the specified type.
+        /// If the type is an array, it returns the element type. If it is a generic type,
+        /// it returns the first generic argument. Otherwise, it returns the type itself.
+        /// </summary>
+        /// <param name="type">The type to check.</param>
         private static Type GetTypeOrElementType(Type type)
         {
             if (type.IsArray)

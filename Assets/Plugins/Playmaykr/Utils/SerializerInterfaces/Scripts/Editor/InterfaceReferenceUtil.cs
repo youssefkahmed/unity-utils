@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Playmaykr.Utils.SerializedInterfaces.Editor
 {
+    /// <summary>
+    /// Utility class for drawing interface references in the Unity Editor.
+    /// </summary>
     public static class InterfaceReferenceUtil
     {
         private static GUIStyle LabelStyle;
@@ -17,6 +20,11 @@ namespace Playmaykr.Utils.SerializedInterfaces.Editor
             DrawInterfaceNameLabel(position, displayString, controlID);
         }
 
+        /// <summary>
+        /// Initializes the GUIStyle for the interface name label if it has not been initialized yet.
+        /// This method is called to ensure that the style is set up only once, improving performance
+        /// by avoiding unnecessary style creation on every GUI call.
+        /// </summary>
         private static void InitializeStyleIfNeeded()
         {
             if (LabelStyle != null)
@@ -35,6 +43,14 @@ namespace Playmaykr.Utils.SerializedInterfaces.Editor
             LabelStyle = style;
         }
 
+        /// <summary>
+        /// Draws the interface name label in the specified position.
+        /// This method is responsible for rendering the label with the interface name,
+        /// adjusting its position and size based on the provided rectangle.
+        /// </summary>
+        /// <param name="position">The rectangle in which to draw the label.</param>
+        /// <param name="displayString">The string to display in the label.</param>
+        /// <param name="controlID">The control ID for the label, used for event handling.</param>
         private static void DrawInterfaceNameLabel(Rect position, string displayString, int controlID)
         {
             if (Event.current.type == EventType.Repaint)
