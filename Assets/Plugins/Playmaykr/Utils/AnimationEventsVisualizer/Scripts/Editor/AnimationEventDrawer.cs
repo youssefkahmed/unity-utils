@@ -3,8 +3,14 @@ using UnityEditor;
 using UnityEditor.Animations;
 using UnityEngine;
 
-namespace Utils.AnimationEvents
+namespace Playmaykr.Utils.AnimationEventsVisualizer.Editor
 {
+    /// <summary>
+    /// Defines a custom property drawer for <c>AnimationEvent</c>, allowing users to
+    /// select animation event names from a dropdown in the Inspector. It dynamically fetches available event names
+    /// from the associated Animator component and displays a property field for the event callback.
+    /// The drawer ensures only valid event names are selectable and adapts its height based on the displayed properties.
+    /// </summary>
     [CustomPropertyDrawer(typeof(AnimationEvent))]
     public class AnimationEventDrawer : PropertyDrawer
     {
@@ -43,6 +49,11 @@ namespace Utils.AnimationEvents
             return EditorGUIUtility.singleLineHeight + EditorGUI.GetPropertyHeight(stateEventProperty) + 4;
         }
         
+        /// <summary>
+        /// Retrieves a list of unique animation event names from the Animator component attached to the specified target object.
+        /// </summary>
+        /// <param name="target">The object with an Animator component to get animation event names from.</param>
+        /// <returns>An array of event names, including a default "None" entry if no valid events are found or if the target is invalid.</returns>
         private static string[] GetEventNamesFromAnimator(Object target)
         {
             List<string> eventNames = new() { "None" }; // Default entry

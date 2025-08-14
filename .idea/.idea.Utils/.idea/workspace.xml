@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8c2b109c-77ba-4b6b-b32a-0eee3899ea9f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Utils/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Utils/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityTechnologies/SpaceRobotKyle/Animations/StarterAssetsThirdPerson.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/UnityTechnologies/SpaceRobotKyle/Animations/StarterAssetsThirdPerson.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/AnimationEvents_SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/AnimationEvents_SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/AnimationEvents/AnimationEventStateBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/AnimationEvents/AnimationEventStateBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/AnimationEvents/Editor/AnimationEventDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/AnimationEvents/Editor/AnimationEventDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +49,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Builds_Throwaway\Utils.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Youssef\Desktop\Builds_Throwaway" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="F:\Software\Unity\2022.3.53f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath G:\Projects\Utils -debugCodeOptimization" />

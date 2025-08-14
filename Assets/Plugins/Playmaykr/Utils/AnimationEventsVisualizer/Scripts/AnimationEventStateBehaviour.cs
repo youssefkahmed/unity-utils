@@ -1,7 +1,15 @@
 using UnityEngine;
 
-namespace Utils.AnimationEvents
+namespace Playmaykr.Utils.AnimationEventsVisualizer
 {
+    /// <summary>
+    /// A state machine behaviour that triggers an animation event at a specified normalized time.
+    /// </summary>
+    /// <remarks>
+    /// This behaviour can be attached to an animation state in an Animator Controller.
+    /// It will trigger the specified event when the animation reaches the defined normalized time.
+    /// The event is can be received by an <c>AnimationEventReceiver</c> component on the same GameObject.
+    /// </remarks>
     public class AnimationEventStateBehaviour : StateMachineBehaviour
     {
         public float TriggerTime => triggerTime;
