@@ -9,14 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9253afdea3649b59c55d86b19d348aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b79825e5c671f340a4d5c04b8a85fba, type: 3}
   m_Name: AnimationPostProcessorSettings
   m_EditorClassIdentifier: 
   enabled: 1
   targetFolder: Assets/_Project/Animations
-  referenceAvatar: {fileID: 9000000, guid: 6d04967b2403b0947a66ac519789eaaa, type: 3}
-  referenceFBX: {fileID: 919132149155446097, guid: 6d04967b2403b0947a66ac519789eaaa,
-    type: 3}
+  referenceAvatar: {fileID: 0}
+  referenceFBX: {fileID: 0}
   enableTranslationDoF: 1
   animationType: 3
   loopTime: 1
