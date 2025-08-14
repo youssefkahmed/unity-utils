@@ -4,58 +4,58 @@ using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
-namespace Utils.AnimationPostProcessing
+namespace Playmaykr.Utils.AnimationPostProcessing.Editor
 {
     public class AnimationPostProcessor : AssetPostprocessor
     {
-        private static AnimationPostProcessorSettings _settings;
-        private static Avatar _referenceAvatar;
-        private static GameObject _referenceFBX;
-        private static ModelImporter _referenceImporter;
-        private static bool _settingsLoaded;
+        private static AnimationPostProcessorSettings Settings;
+        private static Avatar ReferenceAvatar;
+        private static GameObject ReferenceFBX;
+        private static ModelImporter ReferenceImporter;
+        private static bool SettingsLoaded;
 
         private void OnPreprocessModel()
         {
             LoadSettings();
-            if (!_settingsLoaded || !_settings.enabled)
+            if (!SettingsLoaded || !Settings.enabled)
             {
                 return;
             }
 
             // Check if asset is in the specified folder
             var importer = assetImporter as ModelImporter;
-            if (importer == null || !importer.assetPath.StartsWith(_settings.targetFolder))
+            if (importer == null || !importer.assetPath.StartsWith(Settings.targetFolder))
             {
                 return;
             }
             AssetDatabase.ImportAsset(importer.assetPath);
             
             // Extract materials and textures
-            if (_settings.extractTextures)
+            if (Settings.extractTextures)
             {
                 importer.ExtractTextures($"{Path.GetDirectoryName(importer.assetPath)}/Textures");
                 importer.materialLocation = ModelImporterMaterialLocation.External;
             }
             
             // Extract avatar from the reference FBX if not already specified
-            if (_referenceAvatar == null)
+            if (ReferenceAvatar == null)
             {
-                _referenceAvatar = _referenceImporter.sourceAvatar;
+                ReferenceAvatar = ReferenceImporter.sourceAvatar;
             }
             
             // Set the avatar and rig type of the imported model
-            importer.sourceAvatar = _referenceAvatar;
-            importer.animationType = _settings.animationType;
+            importer.sourceAvatar = ReferenceAvatar;
+            importer.animationType = Settings.animationType;
             
             // Set the animation to Generic if there's an issue with the avatar
-            if (_referenceAvatar == null || !_referenceAvatar.isValid)
+            if (ReferenceAvatar == null || !ReferenceAvatar.isValid)
             {
                 importer.animationType = ModelImporterAnimationType.Generic;
             }
             
             // Use serialization to set the avatar correctly
             var destinationObject = new SerializedObject(importer.sourceAvatar);
-            using (var sourceObject = new SerializedObject(_referenceAvatar))
+            using (var sourceObject = new SerializedObject(ReferenceAvatar))
             {
                 CopyHumanDescriptionToDestination(sourceObject, destinationObject);
             }
@@ -65,7 +65,7 @@ namespace Utils.AnimationPostProcessing
             destinationObject.Dispose();
             
             // Translation DoF
-            if (_settings.enableTranslationDoF)
+            if (Settings.enableTranslationDoF)
             {
                 HumanDescription importerHumanDescription = importer.humanDescription;
                 importerHumanDescription.hasTranslationDoF = true;
@@ -73,11 +73,11 @@ namespace Utils.AnimationPostProcessing
             }
             
             // Use reflection to instantiate an Editor and call the Apply method as if the Apply button was pressed
-            if (_settings.forceEditorApply)
+            if (Settings.forceEditorApply)
             {
-                Type editorType = typeof(Editor).Assembly.GetType("UnityEditor.ModelImporterEditor");
+                Type editorType = typeof(UnityEditor.Editor).Assembly.GetType("UnityEditor.ModelImporterEditor");
                 const BindingFlags nonPublic = BindingFlags.NonPublic | BindingFlags.Instance;
-                var editor = Editor.CreateEditor(importer, editorType);
+                var editor = UnityEditor.Editor.CreateEditor(importer, editorType);
                 
                 editorType.GetMethod("Apply", nonPublic)?.Invoke(editor, null);
                 UnityEngine.Object.DestroyImmediate(editor);
@@ -87,14 +87,14 @@ namespace Utils.AnimationPostProcessing
         private void OnPreprocessAnimation()
         {
             LoadSettings();
-            if (!_settingsLoaded || !_settings.enabled)
+            if (!SettingsLoaded || !Settings.enabled)
             {
                 return;
             }
 
             // Check if asset is in the specified folder
             var importer = assetImporter as ModelImporter;
-            if (importer == null || !importer.assetPath.StartsWith(_settings.targetFolder))
+            if (importer == null || !importer.assetPath.StartsWith(Settings.targetFolder))
             {
                 return;
             }
@@ -107,35 +107,35 @@ namespace Utils.AnimationPostProcessing
         private static ModelImporter CopyModelImporterSettings(ModelImporter importer)
         {
             // model tab
-            importer.globalScale = _referenceImporter.globalScale;
-            importer.useFileScale = _referenceImporter.useFileScale;
-            importer.meshCompression = _referenceImporter.meshCompression;
-            importer.isReadable = _referenceImporter.isReadable;
-            importer.optimizeMeshPolygons = _referenceImporter.optimizeMeshPolygons;
-            importer.optimizeMeshVertices = _referenceImporter.optimizeMeshVertices;
-            importer.importBlendShapes = _referenceImporter.importBlendShapes;
-            importer.keepQuads = _referenceImporter.keepQuads;
-            importer.indexFormat = _referenceImporter.indexFormat;
-            importer.weldVertices = _referenceImporter.weldVertices;
-            importer.importVisibility = _referenceImporter.importVisibility;
-            importer.importCameras = _referenceImporter.importCameras;
-            importer.importLights = _referenceImporter.importLights;
-            importer.preserveHierarchy = _referenceImporter.preserveHierarchy;
-            importer.swapUVChannels = _referenceImporter.swapUVChannels;
-            importer.generateSecondaryUV = _referenceImporter.generateSecondaryUV;
-            importer.importNormals = _referenceImporter.importNormals;
-            importer.normalCalculationMode = _referenceImporter.normalCalculationMode;
-            importer.normalSmoothingAngle = _referenceImporter.normalSmoothingAngle;
-            importer.importTangents = _referenceImporter.importTangents;
+            importer.globalScale = ReferenceImporter.globalScale;
+            importer.useFileScale = ReferenceImporter.useFileScale;
+            importer.meshCompression = ReferenceImporter.meshCompression;
+            importer.isReadable = ReferenceImporter.isReadable;
+            importer.optimizeMeshPolygons = ReferenceImporter.optimizeMeshPolygons;
+            importer.optimizeMeshVertices = ReferenceImporter.optimizeMeshVertices;
+            importer.importBlendShapes = ReferenceImporter.importBlendShapes;
+            importer.keepQuads = ReferenceImporter.keepQuads;
+            importer.indexFormat = ReferenceImporter.indexFormat;
+            importer.weldVertices = ReferenceImporter.weldVertices;
+            importer.importVisibility = ReferenceImporter.importVisibility;
+            importer.importCameras = ReferenceImporter.importCameras;
+            importer.importLights = ReferenceImporter.importLights;
+            importer.preserveHierarchy = ReferenceImporter.preserveHierarchy;
+            importer.swapUVChannels = ReferenceImporter.swapUVChannels;
+            importer.generateSecondaryUV = ReferenceImporter.generateSecondaryUV;
+            importer.importNormals = ReferenceImporter.importNormals;
+            importer.normalCalculationMode = ReferenceImporter.normalCalculationMode;
+            importer.normalSmoothingAngle = ReferenceImporter.normalSmoothingAngle;
+            importer.importTangents = ReferenceImporter.importTangents;
         
             // rig tab
-            importer.animationType = _referenceImporter.animationType;
-            importer.optimizeGameObjects = _referenceImporter.optimizeGameObjects;
+            importer.animationType = ReferenceImporter.animationType;
+            importer.optimizeGameObjects = ReferenceImporter.optimizeGameObjects;
             
             // materials tab
-            importer.materialImportMode = _referenceImporter.materialImportMode;
-            importer.materialLocation = _referenceImporter.materialLocation;
-            importer.materialName = _referenceImporter.materialName;
+            importer.materialImportMode = ReferenceImporter.materialImportMode;
+            importer.materialLocation = ReferenceImporter.materialLocation;
+            importer.materialName = ReferenceImporter.materialName;
         
             // naming conventions
             // get the filename of the FBX in case we want to use it for the animation name
@@ -143,14 +143,14 @@ namespace Utils.AnimationPostProcessing
             
             // animations tab
             // return if there are no clips to copy on the reference importer
-            if (_referenceImporter.clipAnimations.Length == 0)
+            if (ReferenceImporter.clipAnimations.Length == 0)
             {
                 return importer;
             }
             
             // Copy the first reference clip settings to all imported clips
-            ModelImporterClipAnimation referenceClip = _referenceImporter.clipAnimations[0];
-            var referenceClipAnimations = _referenceImporter.defaultClipAnimations;
+            ModelImporterClipAnimation referenceClip = ReferenceImporter.clipAnimations[0];
+            var referenceClipAnimations = ReferenceImporter.defaultClipAnimations;
             var defaultClipAnimations = importer.defaultClipAnimations;
             
             foreach (ModelImporterClipAnimation clipAnimation in defaultClipAnimations)
@@ -162,7 +162,7 @@ namespace Utils.AnimationPostProcessing
                 }
             
                 // Rename if needed
-                if (_settings.renameClips)
+                if (Settings.renameClips)
                 {
                     clipAnimation.name = referenceClipAnimations.Length == 1
                         ? fileName
@@ -170,7 +170,7 @@ namespace Utils.AnimationPostProcessing
                 }
                 
                 // Set loop time
-                clipAnimation.loopTime = _settings.loopTime;
+                clipAnimation.loopTime = Settings.loopTime;
 
                 clipAnimation.maskType = referenceClip.maskType;
                 clipAnimation.maskSource = referenceClip.maskSource;
@@ -203,21 +203,21 @@ namespace Utils.AnimationPostProcessing
             if (guids.Length > 0)
             {
                 string path = AssetDatabase.GUIDToAssetPath(guids[0]);
-                _settings = AssetDatabase.LoadAssetAtPath<AnimationPostProcessorSettings>(path);
-                if (_settings.referenceAvatar == null || _settings.referenceFBX == null)
+                Settings = AssetDatabase.LoadAssetAtPath<AnimationPostProcessorSettings>(path);
+                if (Settings.referenceAvatar == null || Settings.referenceFBX == null)
                 {
-                    _settingsLoaded = false;
+                    SettingsLoaded = false;
                     return;
                 }
                 
-                _referenceAvatar = _settings.referenceAvatar;
-                _referenceFBX = _settings.referenceFBX;
-                _referenceImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(_referenceFBX)) as ModelImporter;
-                _settingsLoaded = true;
+                ReferenceAvatar = Settings.referenceAvatar;
+                ReferenceFBX = Settings.referenceFBX;
+                ReferenceImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(ReferenceFBX)) as ModelImporter;
+                SettingsLoaded = true;
             }
             else
             {
-                _settingsLoaded = false;
+                SettingsLoaded = false;
             }
         }
     }

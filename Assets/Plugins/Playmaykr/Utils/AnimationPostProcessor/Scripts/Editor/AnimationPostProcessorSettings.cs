@@ -1,9 +1,9 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Utils.AnimationPostProcessing
+namespace Playmaykr.Utils.AnimationPostProcessing.Editor
 {
-    [CreateAssetMenu(fileName = "AnimationPostProcessorSettings", menuName = "Utils/Animations/AnimationPostProcessor/Settings", order = 1)]
+    [CreateAssetMenu(fileName = "AnimationPostProcessorSettings", menuName = "Playmaykr/Utils/Animations/AnimationPostProcessor/Settings", order = 1)]
     public class AnimationPostProcessorSettings : ScriptableObject
     {
         public bool enabled = true;
