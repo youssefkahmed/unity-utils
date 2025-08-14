@@ -75,7 +75,7 @@ namespace Playmaykr.Utils.AnimationEventsVisualizer.Editor
                 return eventNames.ToArray();
             }
             
-            foreach (AnimatorControllerLayer layer in controller.layers)
+            foreach (AnimatorControllerLayer layer in controller!.layers)
             {
                 foreach (ChildAnimatorState state in layer.stateMachine.states)
                 {

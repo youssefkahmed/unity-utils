@@ -1944,26 +1944,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 14432144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 380868d475974cdb8c774212627fd4bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 11614c3d9feccbf40aeebc3825f2a720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animationEvents:
-  - eventName: OnJumpStart
+  - eventName: None
     onAnimationEvent:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 66711811}
-          m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-          m_MethodName: Play
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
+        m_Calls: []
 --- !u!1001 &66711810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2037,12 +2025,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dedde7c82e8fe247bacce36f39e00a4, type: 3}
---- !u!198 &66711811 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7572695740726549051, guid: 1dedde7c82e8fe247bacce36f39e00a4,
-    type: 3}
-  m_PrefabInstance: {fileID: 66711810}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &207262681
 GameObject:
   m_ObjectHideFlags: 0
