@@ -8,11 +8,11 @@ using UnityEditor.PackageManager.Requests;
 using static System.IO.Path;
 using static UnityEditor.AssetDatabase;
 
-namespace Playmaykr.Utils
+namespace Playmaykr.Utils.ProjectSetupTool.Editor
 {
     public static class Setup
     {
-        [MenuItem("Utils/Setup/Create Default Folders")]
+        [MenuItem("Playmaykr/Utils/Setup/Create Default Folders")]
         public static void CreateDefaultFolders()
         {
             Folders.CreateDefault("_Project", 
@@ -32,7 +32,7 @@ namespace Playmaykr.Utils
             Refresh();
         }
 
-        [MenuItem("Utils/Setup/Import Favorite Assets")]
+        [MenuItem("Playmaykr/Utils/Setup/Import Favorite Assets")]
         public static void ImportMyFavoriteAssets()
         {
             Assets.ImportAsset("DOTween HOTween v2.unitypackage", "Demigiant/Editor ExtensionsAnimation");
@@ -40,7 +40,7 @@ namespace Playmaykr.Utils
             Assets.ImportAsset("Mulligan Renamer.unitypackage", "Red Blue Games/Editor ExtensionsUtilities");
         }
 
-        [MenuItem("Utils/Setup/Install Favorite Open-Source Assets")]
+        [MenuItem("Playmaykr/Utils/Setup/Install Favorite Open-Source Assets")]
         public static void InstallOpenSource()
         {
             Packages.InstallPackages(new[]
@@ -51,7 +51,7 @@ namespace Playmaykr.Utils
             });
         }
         
-        [MenuItem("Utils/Setup/Unity Registry/Install Unity AI Navigation")]
+        [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install Unity AI Navigation")]
         public static void InstallUnityAINavigation()
         {
             Packages.InstallPackages(new[]
@@ -60,7 +60,7 @@ namespace Playmaykr.Utils
             });
         }
         
-        [MenuItem("Utils/Setup/Unity Registry/Install New Input System")]
+        [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install New Input System")]
         public static void InstallNewInputSystem()
         {
             Packages.InstallPackages(new[]
@@ -69,7 +69,7 @@ namespace Playmaykr.Utils
             });
         }
         
-        [MenuItem("Utils/Setup/Unity Registry/Install Cinemachine")]
+        [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install Cinemachine")]
         public static void InstallCinemachine()
         {
             Packages.InstallPackages(new[]
@@ -78,7 +78,7 @@ namespace Playmaykr.Utils
             });
         }
         
-        [MenuItem("Utils/Setup/Unity Registry/Install Animation Rigging")]
+        [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install Animation Rigging")]
         public static void InstallAnimationRigging()
         {
             Packages.InstallPackages(new[]
@@ -87,7 +87,7 @@ namespace Playmaykr.Utils
             });
         }
         
-        [MenuItem("Utils/Setup/Unity Registry/Install Netcode for GameObjects")]
+        [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install Netcode for GameObjects")]
         public static void InstallNetcodeForGameObjects()
         {
             Packages.InstallPackages(new[]
@@ -96,7 +96,7 @@ namespace Playmaykr.Utils
             });
         }
         
-        [MenuItem("Utils/Setup/Unity Registry/Install Shader Graph")]
+        [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install Shader Graph")]
         public static void InstallShaderGraph()
         {
             Packages.InstallPackages(new[]
@@ -105,7 +105,7 @@ namespace Playmaykr.Utils
             });
         }
         
-        [MenuItem("Utils/Setup/Unity Registry/Install TextMesh Pro")]
+        [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install TextMesh Pro")]
         public static void InstallTextMeshPro()
         {
             Packages.InstallPackages(new[]
@@ -114,7 +114,7 @@ namespace Playmaykr.Utils
             });
         }
         
-        [MenuItem("Utils/Setup/Unity Registry/Install XR Interaction Toolkit")]
+        [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install XR Interaction Toolkit")]
         public static void InstallXRInteractionToolkit()
         {
             Packages.InstallPackages(new[]
@@ -156,7 +156,7 @@ namespace Playmaykr.Utils
 
         private static class Packages
         {
-            private static AddRequest _request;
+            private static AddRequest Request;
             private static readonly Queue<string> PackagesToInstall = new();
 
             public static void InstallPackages(IEnumerable<string> packages)
@@ -169,25 +169,25 @@ namespace Playmaykr.Utils
                 // Start the installation of the first package
                 if (PackagesToInstall.Count > 0)
                 {
-                    _request = Client.Add(PackagesToInstall.Dequeue());
+                    Request = Client.Add(PackagesToInstall.Dequeue());
                     EditorApplication.update += Progress;
                 }
             }
 
             private static async void Progress()
             {
-                if (!_request.IsCompleted)
+                if (!Request.IsCompleted)
                 {
                     return;
                 }
                 
-                if (_request.Status == StatusCode.Success)
+                if (Request.Status == StatusCode.Success)
                 {
-                    Debug.Log($"Installed: {_request.Result.packageId}");
+                    Debug.Log($"Installed: {Request.Result.packageId}");
                 }
-                else if (_request.Status >= StatusCode.Failure)
+                else if (Request.Status >= StatusCode.Failure)
                 {
-                    Debug.Log(_request.Error.message);
+                    Debug.Log(Request.Error.message);
                 }
 
                 EditorApplication.update -= Progress;
@@ -197,7 +197,7 @@ namespace Playmaykr.Utils
                 {
                     // Add delay before next package install
                     await Task.Delay(1000);
-                    _request = Client.Add(PackagesToInstall.Dequeue());
+                    Request = Client.Add(PackagesToInstall.Dequeue());
                     EditorApplication.update += Progress;
                 }
             }
