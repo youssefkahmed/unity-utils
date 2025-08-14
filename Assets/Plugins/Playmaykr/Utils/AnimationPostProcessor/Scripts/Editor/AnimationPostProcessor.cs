@@ -6,6 +6,10 @@ using UnityEngine;
 
 namespace Playmaykr.Utils.AnimationPostProcessing.Editor
 {
+    /// <summary>
+    /// A custom asset post processor for handling animation import settings.
+    /// It processes model and animation assets, applying settings from a specified configuration.
+    /// </summary>
     public class AnimationPostProcessor : AssetPostprocessor
     {
         private static AnimationPostProcessorSettings Settings;
@@ -14,6 +18,10 @@ namespace Playmaykr.Utils.AnimationPostProcessing.Editor
         private static ModelImporter ReferenceImporter;
         private static bool SettingsLoaded;
 
+        /// <summary>
+        /// Called before a model asset is imported.
+        /// It applies the settings defined in the AnimationPostProcessorSettings asset.
+        /// </summary>
         private void OnPreprocessModel()
         {
             LoadSettings();
@@ -84,6 +92,10 @@ namespace Playmaykr.Utils.AnimationPostProcessing.Editor
             }
         }
 
+        /// <summary>
+        /// Called before an animation asset is imported.
+        /// It applies the settings defined in the AnimationPostProcessorSettings asset.
+        /// </summary>
         private void OnPreprocessAnimation()
         {
             LoadSettings();
@@ -104,6 +116,10 @@ namespace Playmaykr.Utils.AnimationPostProcessing.Editor
             AssetDatabase.ImportAsset(modelImporter.assetPath, ImportAssetOptions.ForceUpdate);
         }
 
+        /// <summary>
+        /// Called after an asset is imported.
+        /// It sets the avatar for the imported model if it is a humanoid animation.
+        /// </summary>
         private static ModelImporter CopyModelImporterSettings(ModelImporter importer)
         {
             // model tab
@@ -192,11 +208,32 @@ namespace Playmaykr.Utils.AnimationPostProcessing.Editor
             return importer;
         }
         
+        /// <summary>
+        /// Copies the human description from the source avatar to the destination avatar.
+        /// This is necessary to ensure that the imported model has the correct human description.
+        /// </summary>
+        /// <param name="sourceObject">The serialized object of the source avatar.</param>
+        /// <param name="destinationObject">The serialized object of the destination avatar.</param>
+        /// <remarks>
+        /// This method uses the SerializedObject API to copy the human description from one avatar to another.
+        /// It is necessary because the human description is not directly accessible through the public API.
+        /// </remarks>
+        /// <exception cref="ArgumentNullException">Thrown if either sourceObject or destinationObject is null.</exception>
+        /// <exception cref="InvalidOperationException">Thrown if the human description cannot be copied due to an unexpected issue.</exception>
         private static void CopyHumanDescriptionToDestination(SerializedObject sourceObject, SerializedObject destinationObject)
         {
             destinationObject.CopyFromSerializedProperty(sourceObject.FindProperty("m_HumanDescription"));
         }
         
+        /// <summary>
+        /// Loads the settings from the AnimationPostProcessorSettings asset.
+        /// It searches for the asset in the project and initializes the static fields with the loaded settings.
+        /// </summary>
+        /// <remarks>
+        /// This method uses the AssetDatabase to find and load the AnimationPostProcessorSettings asset.
+        /// If the asset is found, it initializes the static fields with the reference avatar and FBX.
+        /// If the asset is not found or the reference avatar or FBX is null, it sets SettingsLoaded to false.
+        /// </remarks>
         private static void LoadSettings()
         {
             string[] guids = AssetDatabase.FindAssets("t:AnimationPostProcessorSettings");
