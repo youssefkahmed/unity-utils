@@ -12,6 +12,9 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
 {
     public static class Setup
     {
+        /// <summary>
+        /// Creates default project folders.
+        /// </summary>
         [MenuItem("Playmaykr/Utils/Setup/Create Default Folders")]
         public static void CreateDefaultFolders()
         {
@@ -32,6 +35,9 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
             Refresh();
         }
 
+        /// <summary>
+        /// Imports a group of (hard-coded) essential assets.
+        /// </summary>
         [MenuItem("Playmaykr/Utils/Setup/Import Favorite Assets")]
         public static void ImportMyFavoriteAssets()
         {
@@ -40,6 +46,9 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
             Assets.ImportAsset("Mulligan Renamer.unitypackage", "Red Blue Games/Editor ExtensionsUtilities");
         }
 
+        /// <summary>
+        /// Installs a group of (hard-coded) favorite, open-source assets from GitHub.
+        /// </summary>
         [MenuItem("Playmaykr/Utils/Setup/Install Favorite Open-Source Assets")]
         public static void InstallOpenSource()
         {
@@ -51,6 +60,9 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
             });
         }
         
+        /// <summary>
+        /// Installs Unity's AI Navigation package.
+        /// </summary>
         [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install Unity AI Navigation")]
         public static void InstallUnityAINavigation()
         {
@@ -60,6 +72,9 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
             });
         }
         
+        /// <summary>
+        /// Installs Unity's New Input System package.
+        /// </summary>
         [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install New Input System")]
         public static void InstallNewInputSystem()
         {
@@ -69,6 +84,9 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
             });
         }
         
+        /// <summary>
+        /// Installs Unity's Cinemachine package.
+        /// </summary>
         [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install Cinemachine")]
         public static void InstallCinemachine()
         {
@@ -78,6 +96,9 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
             });
         }
         
+        /// <summary>
+        /// Installs Unity's Animation Rigging package.
+        /// </summary>
         [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install Animation Rigging")]
         public static void InstallAnimationRigging()
         {
@@ -87,6 +108,9 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
             });
         }
         
+        /// <summary>
+        /// Installs Unity's Netcode for GameObjects package.
+        /// </summary>
         [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install Netcode for GameObjects")]
         public static void InstallNetcodeForGameObjects()
         {
@@ -96,6 +120,9 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
             });
         }
         
+        /// <summary>
+        /// Installs Unity's Shader Graph package.
+        /// </summary>
         [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install Shader Graph")]
         public static void InstallShaderGraph()
         {
@@ -105,6 +132,9 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
             });
         }
         
+        /// <summary>
+        /// Installs Unity's TextMeshPro package.
+        /// </summary>
         [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install TextMesh Pro")]
         public static void InstallTextMeshPro()
         {
@@ -114,6 +144,9 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
             });
         }
         
+        /// <summary>
+        /// Installs Unity's XR Interaction Toolkit package.
+        /// </summary>
         [MenuItem("Playmaykr/Utils/Setup/Unity Registry/Install XR Interaction Toolkit")]
         public static void InstallXRInteractionToolkit()
         {
@@ -125,6 +158,11 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
 
         private static class Folders
         {
+            /// <summary>
+            /// Creates default project folders in the specified root directory.
+            /// </summary>
+            /// <param name="root">The root directory where the folders will be created.</param>
+            /// <param name="folders">An array of folder names to create under the root directory.</param>
             public static void CreateDefault(string root, params string[] folders)
             {
                 string fullPath = Combine(Application.dataPath, root);
@@ -139,6 +177,11 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
                 }
             }
     
+            /// <summary>
+            /// Creates subfolders in the specified root path based on the provided folder hierarchy.
+            /// </summary>
+            /// <param name="rootPath">The root path where the folders will be created.</param>
+            /// <param name="folderHierarchy">The folder hierarchy to create, separated by slashes (e.g., "Folder1/Folder2/Folder3").</param>
             private static void CreateSubFolders(string rootPath, string folderHierarchy)
             {
                 string[] folders = folderHierarchy.Split('/');
@@ -159,6 +202,10 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
             private static AddRequest Request;
             private static readonly Queue<string> PackagesToInstall = new();
 
+            /// <summary>
+            /// Installs a list of packages from the Unity Package Manager.
+            /// </summary>
+            /// <param name="packages">An enumerable collection of package names or URLs to install.</param>
             public static void InstallPackages(IEnumerable<string> packages)
             {
                 foreach (string package in packages)
@@ -174,6 +221,9 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
                 }
             }
 
+            /// <summary>
+            /// Monitors the installation progress of the package and logs the result.
+            /// </summary>
             private static async void Progress()
             {
                 if (!Request.IsCompleted)
@@ -205,6 +255,9 @@ namespace Playmaykr.Utils.ProjectSetupTool.Editor
 
         private static class Assets
         {
+            /// <summary>
+            /// Imports a Unity package from the specified path.
+            /// </summary>
             public static void ImportAsset(string asset, string subfolder, string rootFolder = "C:/Users/Youssef/AppData/Roaming/Unity/Asset Store-5.x")
             {
                 ImportPackage(Combine(rootFolder, subfolder, asset), false);
