@@ -6,3 +6,5 @@ A general Unity project that contains (and should continually grow with) various
 * Animation Post Processor
 * Project Setup Tool
 * Serializable Interfaces
+* Custom Timers
+* Vector Math Library
