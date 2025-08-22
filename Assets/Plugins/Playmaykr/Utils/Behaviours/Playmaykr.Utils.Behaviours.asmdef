@@ -1,0 +1,14 @@
+{
+    "name": "Playmaykr.Utils.Behaviours",
+    "rootNamespace": "Playmaykr.Utils.Behaviours",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

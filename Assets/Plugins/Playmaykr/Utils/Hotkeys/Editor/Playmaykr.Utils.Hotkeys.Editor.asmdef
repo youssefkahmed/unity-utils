@@ -1,0 +1,16 @@
+{
+    "name": "Playmaykr.Utils.Hotkeys.Editor",
+    "rootNamespace": "Playmaykr.Utils.Hotkeys.Editor",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

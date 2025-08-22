@@ -6,23 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8ecc0c75-a0cb-4c89-b7cc-8e54f278ad92" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Utils/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Utils/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scenes/SerializedInterfaces_SandboxScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scenes/SerializedInterfaces_SandboxScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Demo/DamageableObject.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Demo/DamageableObject.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Demo/DemoScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Demo/DemoScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Editor/InterfaceReferenceDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Editor/InterfaceReferenceDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Editor/InterfaceReferenceUtil.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Editor/InterfaceReferenceUtil.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Editor/RequireInterfaceDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/Editor/RequireInterfaceDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/InterfaceReference.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/InterfaceReference.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/RequireInterfaceAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SerializerInterfaces/Scripts/RequireInterfaceAttribute.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +16,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6ff3bcb667574bf9a8630184172fcfbf176600/16/6884e7ae/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/852a96aeaa894abe80349589fdb9b96495d400/eb/a2232627/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/Helpers/WaitFor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Demo/DamageableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Editor/InterfaceReferenceDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Playmaykr/Utils/SerializerInterfaces/Scripts/Editor/InterfaceReferenceUtil.cs" root0="FORCE_HIGHLIGHTING" />
@@ -51,14 +36,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "serialized-interfaces",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -70,6 +55,14 @@
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Builds_Throwaway\Utils.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Youssef\Desktop\Builds_Throwaway" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="F:\Software\Unity\2022.3.53f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath G:\Projects\Utils -debugCodeOptimization" />
@@ -110,7 +103,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8c2b109c-77ba-4b6b-b32a-0eee3899ea9f" name="Changes" comment="" />
+      <changelist id="8ecc0c75-a0cb-4c89-b7cc-8e54f278ad92" name="Changes" comment="" />
       <created>1733253859675</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -119,6 +112,7 @@
       <workItem from="1733261397728" duration="4776000" />
       <workItem from="1733428041154" duration="4546000" />
       <workItem from="1733435583005" duration="2494000" />
+      <workItem from="1755860772266" duration="5216000" />
     </task>
     <servers />
   </component>

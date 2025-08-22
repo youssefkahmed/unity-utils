@@ -1,0 +1,16 @@
+{
+    "name": "Playmaykr.Utils.EditorExtensions.Editor",
+    "rootNamespace": "Playmaykr.Utils.EditorExtensions.Editor",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
